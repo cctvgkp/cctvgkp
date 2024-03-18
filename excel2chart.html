@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excel Data Visualization with Controls</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <input type="file" id="upload" accept=".xlsx, .xls">
+        <button id="convertBtn">转换并展示图表</button>
+    </div>
+
+    <div>
+        <label for="colorPicker">柱状图颜色:</label>
+        <input type="color" id="colorPicker" value="#c23531">
+        <button id="sortAscBtnDepartment">部门分数升序</button>
+        <button id="sortDescBtnDepartment">部门分数降序</button>
+        <button id="sortAscBtnClass">班级分数升序</button>
+        <button id="sortDescBtnClass">班级分数降序</button>
+    </div>
+
+    <div id="departmentChart" style="width: 800px; height: 400px;"></div>
+    <div id="classChart" style="width: 800px; height: 400px;"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="visualization.js"></script>
+
+</body>
+
+</html>
