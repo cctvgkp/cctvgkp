@@ -2,8 +2,46 @@
 <html>
 
 <head>
-    <title>Excel Data Visualization with Controls</title>
+    <title>量化图表生成</title>
     <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+        }
+
+        input, button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px; /* 增大字体大小 */
+        }
+
+        #departmentChart, #classChart {
+            width: 100%;
+            max-width: 800px; /* 限制最大宽度，但允许在较小屏幕上缩小 */
+            height: 400px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) { /* 针对小屏幕的样式调整 */
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            input, button {
+                width: 100%; /* 在小屏幕上使元素宽度充满容器 */
+                box-sizing: border-box; /* 确保宽度包括padding */
+            }
+        }
+    </style>
 </head>
 
 <body>
